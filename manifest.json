@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "IG saver",
+	"description": "This extension can help you save ig image/video easily.",
+	"version": "1.0",
+	"author": "Roy Lu(royvbtw)",
+	"permissions": [
+		"activeTab", "contextMenus", "downloads"
+	],
+	"icons": {
+		"16": "assets/icon-16.png",
+		"48": "assets/icon-48.png",
+		"128": "assets/icon-128.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"matches": ["https://www.instagram.com/*"],
+		"js": ["content-scripts.js"]
+    }]
+
+}
